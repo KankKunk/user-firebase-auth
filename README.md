@@ -33,6 +33,7 @@ Before you begin, ensure you have met the following requirements:
 5. **Initialize the project**:
     ```sh
     npm init -y
+    npm init
     ```
 
 6. **Install necessary dependencies**:
