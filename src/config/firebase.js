@@ -1,6 +1,8 @@
 require("dotenv").config();
 const firebase = require("firebase/app");
 const admin = require('firebase-admin');
+const initializeApp = require('firebase/app');
+const getStorage = require('firebase/storage');
 const {
   getAuth,
   createUserWithEmailAndPassword,
@@ -8,7 +10,10 @@ const {
   signOut,
   sendEmailVerification,
   sendPasswordResetEmail,
-  updateProfile
+  updateProfile,
+  reauthenticateWithCredential,
+  EmailAuthProvider,
+  updatePassword
 } = require("firebase/auth");
 
 const serviceAccount = require("../config/FirebaseService.json");
@@ -38,6 +43,9 @@ module.exports = {
   sendEmailVerification,
   sendPasswordResetEmail,
   updateProfile,
+  reauthenticateWithCredential,
+  EmailAuthProvider,
+  updatePassword,
   admin,
   db
 };
