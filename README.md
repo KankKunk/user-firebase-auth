@@ -40,6 +40,15 @@ Before you begin, ensure you have met the following requirements:
     ```sh
     npm install express cookie-parser firebase firebase-admin dotenv
     ```
+    ```sh
+    npm install @google-cloud/storage
+    ```
+    ```sh
+    npm install multer
+    ```
+    ```sh
+    npm install firebase-admin - save
+    ```
 
 7. **Create a `.env` file**:
     ```sh
