@@ -19,6 +19,25 @@ Before you begin, ensure you have met the following requirements:
     sudo apt update
     sudo apt install nodejs npm -y
     ```
+    
+   **Using Node Version Manager (NVM)**:
+
+   **Install NVM**:
+    ```sh
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    source ~/.nvm/nvm.sh
+    ```
+
+   **Install and use the latest Node.js version**:
+    ```sh
+    nvm install 16
+    nvm use 16
+    ```
+
+   **Verify Node.js version**:
+    ```sh
+    node -v
+    ```
 
 3. **Clone the repository**:
     ```sh
