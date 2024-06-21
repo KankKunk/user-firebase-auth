@@ -125,6 +125,51 @@ Before you begin, ensure you have met the following requirements:
     Listening on port 5000
     ```
 
+## Running the Application with pm2
+
+1. **Install pm2**:
+    ```sh
+    npm install -g pm2
+    ```
+
+2. **Run your Node.js application with pm2 and name the process (e.g., my-node-app)**:
+    ```sh
+    pm2 start src/app.js --name my-node-app
+    ```
+
+3. **Save the process list and configure pm2 to start on boot**:
+    ```sh
+    pm2 save
+    pm2 startup
+    ```
+    Follow the instructions provided by the `pm2 startup` command to enable the startup configuration. This may include executing additional commands given by pm2.
+
+4. **Monitor the application**:
+    - To see a list of all processes managed by pm2:
+        ```sh
+        pm2 list
+        ```
+    - To see application logs:
+        ```sh
+        pm2 logs my-node-app
+        ```
+
+5. **Manage the application**:
+    - To stop the application:
+        ```sh
+        pm2 stop my-node-app
+        ```
+    - To restart the application:
+        ```sh
+        pm2 restart my-node-app
+        ```
+    - To delete the application from pm2:
+        ```sh
+        pm2 delete my-node-app
+        ```
+
+By using pm2, you can ensure that your Node.js application runs continuously and restarts automatically in case of failures.
+
 ## Testing the API Endpoints
 
 You can test the API endpoints using Postman. Refer to the [Postman Collection Guide](https://docs.google.com/document/d/1kvSbwL57XVjMX6Ije7vDp3Pix2sCaofgeJS37aJvVGA/edit?usp=sharing) for detailed instructions.
